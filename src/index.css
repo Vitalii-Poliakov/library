@@ -1,13 +1,291 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 0.012em;
+  line-height: 1.21053;
+}
+
+.app-container {
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  flex-flow: row nowrap;
+  height: 48px;
+  justify-content: space-between;
+  top: 0;
+  z-index: 50;
+}
+
+header,
+.menu {
+  position: fixed;
+  width: 100%;
+}
+
+header,
+.logo-text,
+.logo-icon,
+.search-button {
+  color: #fff;
+}
+
+header,
+.app-container {
+  display: flex;
+}
+
+header,
+.search-button {
+  background-color: #0fadad;
+}
+
+header Link,
+.logo-text,
+.menu,
+.menu a,
+.menu-icon-placeholder,
+.icon-placeholder,
+.menu-icon,
+.search-bar,
+.bookPlaceholder {
+  display: inline-block;
+}
+
+.logo,
+.menu-icon,
+.search-button {
+  cursor: pointer;
+}
+
+.logo,
+.menu a {
+  font-size: 22px;
+}
+
+.logo {
+  height: 28px;
+  margin-top: 11px;
+}
+
+.logo-icon {
+  margin-right: 5px;
+}
+
+.menu {
+  background-color: #fff;
+  height: 100%;
+  top: 0;
+  z-index: 49;
+}
+
+.menu,
+.book-search {
+  margin-top: 48px;
+}
+
+.menu,
+footer,
+.book-search {
+  text-align: center;
+}
+
+a,
+a:active,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu a {
+  border-bottom: 1px solid #ccc;
+  height: 40px;
+  width: 75%;
+}
+
+.menu a,
+footer {
+  padding: 12px 0;
+}
+
+.menu a,
+.bookInfo {
+  text-align: left;
+}
+
+footer {
+  background-color: rgb(10, 10, 10);
+  color: #ccc;
+  margin-top: auto;
+}
+
+.menu-icon-placeholder,
+.icon-placeholder {
+  min-width: 48px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.about {
+  font-size: 14px;
+  margin: 20px 50px;
+  padding-top: 48px;
+}
+
+.book-search {
+  margin-bottom: 48px;
+}
+
+.search-bar {
+  border: 0.5px solid #0fadad;
+  border-radius: 5px 0px 0px 5px;
+  max-width: 400px;
+  padding: 5px 5px;
+  width: 70vw;
+}
+
+.search-bar,
+.search-button {
+  appearance: none;
+  height: 36px;
+  -moz-appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.search-button,
+.desktop-menu {
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.search-button {
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  width: 36px;
+  padding-bottom: 1px;
+}
+
+.grid-container {
+  display: grid;
+  flex-flow: column nowrap;
+  grid-template-columns: 50% 50%;
+  width: 90%;
+}
+
+.grid-container,
+.bookPlaceholder {
+  margin: 0 auto;
+}
+
+.book {
+  border: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.bookPlaceholder {
+  padding: 10px;
+  width: 152px;
+}
+
+img {
+  height: 200px;
+}
+
+img,
+.bookInfo {
+  width: 132px;
+}
+
+.form-placeholer {
+  margin: 48px 0;
+}
+
+.author {
+  font-size: 13.5px;
+}
+
+.title {
+  margin: 5px 0;
+}
+
+.about a,
+.title:hover {
+  text-decoration: underline;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.desktop-menu ul {
+  margin: 12px 0;
+}
+
+.desktop-menu li {
+  margin: 0 50px;
+}
+
+@media (min-width: 635px) {
+  .grid-container {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    width: 90%;
+  }
+}
+
+@media (min-width: 952px) {
+  .grid-container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+
+@media (min-width: 1060px) {
+  .grid-container {
+    width: 80%;
+  }
+
+  .desktop-menu,
+  .desktop-menu li {
+    display: inline;
+  }
+
+  .icon-placeholder {
+    min-width: 310px;
+  }
+
+  .menu-icon,
+  .menu {
+    display: none;
+  }
+
+  .desktop-menu a,
+  .desktop-menu a:active,
+  .desktop-menu a:visited {
+    color: #fff;
+  }
+
+  .about {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid-container {
+    width: 60%;
+  }
 }
