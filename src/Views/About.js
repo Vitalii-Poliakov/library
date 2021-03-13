@@ -7,7 +7,7 @@ function About() {
     <div className="about">
       <h1>This Application has been developed by Vitalii Poliakov.</h1>
       <h2>
-        <a href="https://github.com/Vitalii-Poliakov/library_code">
+        <a href="https://github.com/Vitalii-Poliakov/library/tree/master">
           Click here
         </a>{" "}
         to see code for this app

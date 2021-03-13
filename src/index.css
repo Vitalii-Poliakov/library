@@ -196,19 +196,18 @@ form {
 .book {
   border: 1px solid #ddd;
   padding: 20px 0;
+  margin: 2px 2px;
 }
 
 .bookPlaceholder {
   padding: 10px;
-  width: 152px;
 }
 
 img {
   height: 200px;
 }
 
-img,
-.bookInfo {
+img {
   width: 132px;
 }
 
