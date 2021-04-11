@@ -1,4 +1,4 @@
-#Click this link to open the app in a new browser tab: vitalii-poliakov.github.io/library
+#Click this link to open the app in a new browser tab: https://vitalii-poliakov.github.io/library/
 
 # Getting Started with Create React App
 
